@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lendrates"
+version = "0.1.0"
+description = "what a dollar earns and what borrowing one costs on aave v3, spark, compound v3 and the sky savings rate, read from the contracts on ethereum mainnet. no keys."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Alina Schanz" }]
+keywords = ["ethereum", "defi", "lending", "aave", "compound", "stablecoins", "cli"]
+classifiers = [
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/alinaschanz/lendrates"
+Author = "https://alinaschanz.life"
+Issues = "https://github.com/alinaschanz/lendrates/issues"
+Changelog = "https://github.com/alinaschanz/lendrates/blob/main/CHANGELOG.md"
+
+[project.scripts]
+lendrates = "lendrates.cli:main"
+
+[tool.setuptools]
+packages = ["lendrates"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
