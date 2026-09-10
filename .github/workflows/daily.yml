@@ -1,0 +1,29 @@
+name: daily snapshot
+
+# one row per asset and market per day into data/daily.csv: supply and borrow apy, utilization,
+# supplied and borrowed in usd. no keys: everything is an eth_call on a public json-rpc endpoint.
+
+on:
+  schedule:
+    - cron: "33 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m lendrates --summary-append data/daily.csv --quiet
+      - name: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/daily.csv
+          git diff --cached --quiet || git commit -m "data: snapshot $(date -u +%F)"
+          git push
