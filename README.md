@@ -1,10 +1,10 @@
 # lendrates
 
-[![ci](https://github.com/alinaschanz/lendrates/actions/workflows/ci.yml/badge.svg)](https://github.com/alinaschanz/lendrates/actions/workflows/ci.yml)
+[![ci](https://github.com/AlinaSchan/lendrates/actions/workflows/ci.yml/badge.svg)](https://github.com/AlinaSchan/lendrates/actions/workflows/ci.yml)
 ![python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab)
 ![license mit](https://img.shields.io/badge/license-MIT-2b7a74)
-[![release](https://img.shields.io/github/v/release/alinaschanz/lendrates?color=2b7a74)](https://github.com/alinaschanz/lendrates/releases)
-[![openssf scorecard](https://api.scorecard.dev/projects/github.com/alinaschanz/lendrates/badge)](https://scorecard.dev/viewer/?uri=github.com/alinaschanz/lendrates)
+[![release](https://img.shields.io/github/v/release/AlinaSchan/lendrates?color=2b7a74)](https://github.com/AlinaSchan/lendrates/releases)
+[![openssf scorecard](https://api.scorecard.dev/projects/github.com/AlinaSchan/lendrates/badge)](https://scorecard.dev/viewer/?uri=github.com/AlinaSchan/lendrates)
 
 what a dollar earns and what borrowing one costs on ethereum's big lending markets, right now:
 aave v3, spark, the compound v3 comets and the sky savings rate, read from the contracts at one
@@ -56,7 +56,7 @@ rewards paid in other tokens; those change weekly and are not in the contracts r
 ## install
 
 ```
-pipx install git+https://github.com/alinaschanz/lendrates
+pipx install git+https://github.com/AlinaSchan/lendrates
 ```
 
 or clone it and run `python -m lendrates` from the folder. python 3.10 or newer, no dependencies.
@@ -121,8 +121,8 @@ lists the pools that are nearly lent out.
 
 ## see also
 
-- [stablepeg](https://github.com/alinaschanz/stablepeg): whether the dollars in these pools are still a dollar
-- [bigmoves](https://github.com/alinaschanz/bigmoves), [netflows](https://github.com/alinaschanz/netflows): where large amounts of them go
+- [stablepeg](https://github.com/AlinaSchan/stablepeg): whether the dollars in these pools are still a dollar
+- [bigmoves](https://github.com/AlinaSchan/bigmoves), [netflows](https://github.com/AlinaSchan/netflows): where large amounts of them go
 - the notes: [alinaschanz.life](https://alinaschanz.life), the short version on [x](https://x.com/alinaschanz)
 
 ## verify a release
@@ -132,7 +132,7 @@ file, and a build provenance attestation made in github's own signing flow. with
 into one folder:
 
     sha256sum -c SHA256SUMS
-    gh attestation verify ./*.whl --owner alinaschanz
+    gh attestation verify ./*.whl --owner AlinaSchan
     ots verify SHA256SUMS.ots
 
 the commit itself is [signed](https://alinaschanz.life/verify/#commits).

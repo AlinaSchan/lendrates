@@ -20,10 +20,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/alinaschanz/lendrates"
+Homepage = "https://github.com/AlinaSchan/lendrates"
 Author = "https://alinaschanz.life"
-Issues = "https://github.com/alinaschanz/lendrates/issues"
-Changelog = "https://github.com/alinaschanz/lendrates/blob/main/CHANGELOG.md"
+Issues = "https://github.com/AlinaSchan/lendrates/issues"
+Changelog = "https://github.com/AlinaSchan/lendrates/blob/main/CHANGELOG.md"
 
 [project.scripts]
 lendrates = "lendrates.cli:main"
